@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 100;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-ExtraLight.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 300;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-Light.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 400;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-Regular.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 500;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-Medium.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 600;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-SemiBold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 700;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-Bold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 800;
+  src:  /* IE6-8 */ url('./PlusJakartaSans/PlusJakartaSans-ExtraBold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('./PlusJakartaSans/PlusJakartaSans-ExtraBold.woff2') format('woff2');
+}
