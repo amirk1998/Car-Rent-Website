@@ -3,15 +3,15 @@
 
 const HomeComponent = () => {
   return (
-    <div className=''>
+    <div className='px-6'>
       <div className='flex items-center justify-between mt-8'>
-        <div className='text-primary-500 font-bold uppercase ml-6'>Morent</div>
-        <div className='w-6 h-6 rounded-full mr-6 flex items-center justify-center'>
-          <img src={'../../../public/images/profile-1.png'} alt='user' />
+        <div className='text-primary-500 font-bold uppercase'>Morent</div>
+        <div className='w-6 h-6 rounded-full flex items-center justify-center'>
+          <img src={'/images/profile-1.png'} alt='user' />
         </div>
       </div>
-      {/*  */}
-      <div className='flex items-center justify-between px-6 mt-8'>
+      {/* Search Input */}
+      <div className='flex items-center justify-between mt-8'>
         <div className='relative'>
           <div className='absolute inset-y-0 flex items-center left-3 top-3 w-6 h-6 text-secondary-200 '>
             <svg
@@ -32,7 +32,7 @@ const HomeComponent = () => {
           </div>
           <input
             type='text'
-            className='block h-12 w-64 border border-secondary-200 rounded-xl placeholder-secondary-200 placeholder:text-sm pl-12 text-sm'
+            className='block h-12 w-64 border border-secondary-200 rounded-xl placeholder-secondary-200 placeholder:text-sm pl-12 text-sm outline-none focus:outline-none focus:border-2 focus:border-primary-500'
             placeholder='Search something here'
           />
         </div>
@@ -70,6 +70,26 @@ const HomeComponent = () => {
             />
           </svg>
         </div>
+      </div>
+      {/* Ads */}
+      <div className='w-full bg-info-500 h-[232px] mt-8 rounded-xl pt-4'>
+        <div className='px-4 flex flex-col mb-4'>
+          <p className='text-base text-primary-000 mb-4 font-semibold '>
+            The Best Platform for Car Rental
+          </p>
+          <p className='text-sm font-medium text-primary-000 '>
+            Ease of doing a car rental safely and reliably. Of course at a low
+            price.
+          </p>
+          <button className='mt-4 bg-primary-500 hover:bg-primary-700 text-primary-000 text-center font-semibold text-xs w-32 h-11 rounded-xl'>
+            Rental Car
+          </button>
+        </div>
+        <img
+          className='ml-[54px] h-14 w-[196px] mb-1'
+          src={'/images/Ads-Car-1.png'}
+          alt='ads-car'
+        />
       </div>
     </div>
   );
