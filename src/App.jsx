@@ -1,7 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import routes from './routes';
+
 function App() {
   return (
     <div className='App'>
-      <h1 className='text-center text-4xl'>Hello</h1>
+      <Routes>
+        {routes.map((route) => {
+          return <Route {...route} key={crypto.randomUUID()} />;
+        })}
+      </Routes>
     </div>
   );
 }
