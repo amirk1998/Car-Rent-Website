@@ -5,6 +5,7 @@ module.exports = {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './src/**/**/*.{js,ts,jsx,tsx}',
+    './node_modules/react-tailwindcss-datepicker/dist/index.esm.js',
   ],
   theme: {
     extend: {
@@ -81,5 +82,8 @@ module.exports = {
       'info-900': '#102e7a',
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    // ...
+  ],
 };

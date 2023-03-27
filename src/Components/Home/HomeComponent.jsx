@@ -1,6 +1,8 @@
 // import profilePhoto from '../../assets/img/profile-1.png';
 // import { ReactComponent as settingIcon } from '../../assets/icons/setting.svg';
 
+import PickUpComponent from '../PickUpComponent/PickUpComponent';
+
 const HomeComponent = () => {
   return (
     <div className='px-6'>
@@ -32,7 +34,7 @@ const HomeComponent = () => {
           </div>
           <input
             type='text'
-            className='block h-12 w-64 border border-secondary-200 rounded-xl placeholder-secondary-200 placeholder:text-sm pl-12 text-sm outline-none focus:outline-none focus:border-2 focus:border-primary-500'
+            className='block h-12 mr-4 border border-secondary-200 rounded-xl w-64 sm:w-[384px] md:w-[520px] placeholder-secondary-200 placeholder:text-sm pl-12 text-sm outline-none focus:outline-none focus:border-2 focus:border-primary-500 ring-0 focus:ring-0'
             placeholder='Search something here'
           />
         </div>
@@ -71,6 +73,7 @@ const HomeComponent = () => {
           </svg>
         </div>
       </div>
+
       {/* Ads */}
       <div className='w-full bg-info-500 h-[232px] mt-8 rounded-xl pt-4'>
         <div className='px-4 flex flex-col mb-4'>
@@ -86,11 +89,13 @@ const HomeComponent = () => {
           </button>
         </div>
         <img
-          className='ml-[54px] h-14 w-[196px] mb-1'
+          className='ml-[54px] h-14 w-48 mb-1'
           src={'/images/Ads-Car-1.png'}
           alt='ads-car'
         />
       </div>
+      {/* Pick */}
+      <div>{/* <PickUpComponent /> */}</div>
     </div>
   );
 };
