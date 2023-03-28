@@ -11,11 +11,18 @@
   "dependencies": {
     "dayjs": "^1.11.7",
     "moment": "^2.29.4",
+    "moment-timezone": "^0.5.42",
+    "rc-time-picker": "^3.7.3",
     "react": "^18.2.0",
     "react-datepicker": "^4.10.0",
+    "react-datetime": "^3.2.0",
     "react-dom": "^18.2.0",
+    "react-dropdown-select": "^4.9.3",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0",
-    "react-tailwindcss-datepicker": "^1.5.1"
+    "react-select": "^5.7.2",
+    "react-tailwindcss-datepicker": "^1.5.1",
+    "react-time-picker": "^5.2.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

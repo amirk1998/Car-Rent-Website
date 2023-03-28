@@ -3,7 +3,7 @@ import routes from './routes';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App bg-page-bg w-full min-h-screen h-screen'>
       <Routes>
         {routes.map((route) => {
           return <Route {...route} key={crypto.randomUUID()} />;

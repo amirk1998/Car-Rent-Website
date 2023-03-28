@@ -80,6 +80,8 @@ module.exports = {
       'info-700': '#2a60b7',
       'info-800': '#1a4393',
       'info-900': '#102e7a',
+      // page background color
+      'page-bg': '#F6F7F9',
     },
   },
   plugins: [
