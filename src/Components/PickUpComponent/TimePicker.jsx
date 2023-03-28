@@ -1,19 +1,78 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import moment from 'moment-timezone';
+import { HiChevronDown } from 'react-icons/hi2';
 
-const options = [];
-for (let i = 0; i < 24; i++) {
-  for (let j = 0; j < 60; j += 30) {
-    options.push({
-      label: `${i.toString().padStart(2, '0')}:${j
-        .toString()
-        .padStart(2, '0')}`,
-      value: `${i.toString().padStart(2, '0')}:${j
-        .toString()
-        .padStart(2, '0')}`,
+const timeOptions = [];
+
+for (let hour = 0; hour <= 23; hour++) {
+  for (let minute = 0; minute < 60; minute += 30) {
+    const time = moment()
+      .startOf('day')
+      .add(hour, 'hours')
+      .add(minute, 'minutes');
+
+    timeOptions.push({
+      value: time.format('HH:mm'),
+      label: time.format('h:mm A'),
     });
   }
 }
+
+const customStyles = {
+  control: (provided, state) => ({
+    ...provided,
+    height: '40px',
+    width: '100px',
+    border: 'none',
+    boxShadow: 'none',
+    borderRadius: '6px',
+
+    // border: '1px solid #e5e7eb',
+    // borderRadius: '5px',
+    // boxShadow: state.isFocused ? '0 0 0 2px #6b7280' : 'none',
+    // '&:hover': {
+    //   borderColor: '#d1d5db',
+    // },
+  }),
+  menu: (provided, state) => ({
+    ...provided,
+    marginTop: '2px',
+    width: '110px',
+    maxHeight: '200px',
+    overflowY: 'hide',
+
+    boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.2)',
+    borderRadius: '5px',
+    zIndex: '999',
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    fontSize: '12px',
+    padding: '8px 16px',
+    backgroundColor: state.isSelected ? '#f9fafb' : 'transparent',
+    color: state.isSelected ? '#90a3bf' : '#374151',
+    '&:hover': {
+      backgroundColor: '#658df1',
+    },
+  }),
+  singleValue: (provided, state) => ({
+    ...provided,
+    fontSize: '12px',
+    color: '#90a3bf',
+  }),
+  dropdownIndicator: (provided) => ({
+    ...provided,
+    color: '#6B7280',
+    '&:hover': {
+      color: '#4B5563',
+    },
+  }),
+  indicatorSeparator: (provided) => ({
+    ...provided,
+    display: 'none',
+  }),
+};
 
 const TimePicker = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -22,27 +81,20 @@ const TimePicker = () => {
     setSelectedOption(selected);
   };
 
-  const customStyles = {
-    menu: (provided, state) => ({
-      ...provided,
-      width: '100px',
-      maxHeight: '200px',
-      overflowY: 'scroll',
-      color: state.isSelected && '#90a3bf',
-      // color: '#90a3bf',
-    }),
-  };
-
   return (
     <Select
-      value={selectedOption}
+      options={timeOptions}
       onChange={handleChange}
-      options={options}
-      // isClearable
-      isSearchable={false}
-      placeholder='7:00'
-      className='w-38 border-0 focus:border-0 ring-0 focus:ring-0 text-xs '
+      value={selectedOption}
       styles={customStyles}
+      isSearchable={false}
+      menuPlacement='bottom'
+      menuPosition='fixed'
+      menuShouldScrollIntoView={true}
+      menuPortalTarget={document.body}
+      maxMenuHeight={200}
+      pageSize={3}
+      components={{ DropdownIndicator: () => <HiChevronDown /> }}
     />
   );
 };
