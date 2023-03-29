@@ -53,7 +53,7 @@ const customStyles = {
   control: (provided, state) => ({
     ...provided,
     height: '40px',
-    width: '100px',
+    width: '80px',
     border: 'none',
     boxShadow: 'none',
     borderRadius: '6px',
@@ -128,7 +128,7 @@ const LocationSearch = () => {
       options={cityNames.filter(filterOptions)}
       onInputChange={handleInputChange}
       styles={customStyles}
-      placeholder='Location'
+      placeholder='City'
       menuPlacement='bottom'
       menuPosition='fixed'
       menuShouldScrollIntoView={true}

@@ -23,10 +23,11 @@ const customStyles = {
   control: (provided, state) => ({
     ...provided,
     height: '40px',
-    width: '100px',
+    width: '90px',
     border: 'none',
     boxShadow: 'none',
     borderRadius: '6px',
+    fontSize: '12px',
 
     // border: '1px solid #e5e7eb',
     // borderRadius: '5px',
@@ -38,7 +39,7 @@ const customStyles = {
   menu: (provided, state) => ({
     ...provided,
     marginTop: '2px',
-    width: '110px',
+    width: '90px',
     maxHeight: '200px',
     overflowY: 'hide',
 
@@ -88,6 +89,7 @@ const TimePicker = () => {
       value={selectedOption}
       styles={customStyles}
       isSearchable={false}
+      placeholder='Time'
       menuPlacement='bottom'
       menuPosition='fixed'
       menuShouldScrollIntoView={true}

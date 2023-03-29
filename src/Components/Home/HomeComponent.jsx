@@ -1,7 +1,7 @@
 // import profilePhoto from '../../assets/img/profile-1.png';
 // import { ReactComponent as settingIcon } from '../../assets/icons/setting.svg';
 
-import PickUpComponent from '../PickUpComponent/PickUpComponent';
+import PickUpCar from '../PickUpCar/PickUpCar';
 
 const HomeComponent = () => {
   return (
@@ -95,7 +95,9 @@ const HomeComponent = () => {
         />
       </div>
       {/* Pick */}
-      <div>{/* <PickUpComponent /> */}</div>
+      <div className='mt-8'>
+        <PickUpCar />
+      </div>
     </div>
   );
 };
