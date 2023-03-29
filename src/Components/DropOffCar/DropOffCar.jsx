@@ -4,18 +4,20 @@ import DateSelect from '../Common/DateSelect';
 import LocationSearch from '../Common/LocationPicker';
 import TimePicker from '../Common/TimePicker';
 
-const PickUpCar = () => {
+const DropOffCar = () => {
   //
   //
   return (
     <div className='flex w-full h-36 bg-primary-000 rounded-xl pt-4'>
       <div className='flex flex-col'>
-        {/* Pick up Title */}
+        {/* Drop Off Title */}
         <div className='flex items-center px-4'>
-          <div className='rounded-full border-8 border-primary-300 w-2 h-2 mr-2 flex items-center justify-center'>
-            <div className='rounded-full border-4 border-primary-500 w-2 h-2'></div>
+          <div className='rounded-full border-8 border-info-300 w-2 h-2 mr-2 flex items-center justify-center'>
+            <div className='rounded-full border-4 border-info-500 w-2 h-2'></div>
           </div>
-          <p className='text-secondary-500 font-semibold text-base '>Pick-Up</p>
+          <p className='text-secondary-500 font-semibold text-base '>
+            Drop-Off
+          </p>
         </div>
         <div className='flex items-center'>
           {/* Location */}
@@ -47,4 +49,4 @@ const PickUpCar = () => {
   );
 };
 
-export default PickUpCar;
+export default DropOffCar;

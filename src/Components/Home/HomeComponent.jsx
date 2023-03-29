@@ -1,9 +1,15 @@
-// import profilePhoto from '../../assets/img/profile-1.png';
-// import { ReactComponent as settingIcon } from '../../assets/icons/setting.svg';
-
 import PickUpCar from '../PickUpCar/PickUpCar';
+import { HiArrowsUpDown } from 'react-icons/hi2';
+import DropOffCar from '../DropOffCar/DropOffCar';
+import { useState } from 'react';
 
 const HomeComponent = () => {
+  const [isReverse, setIsReverse] = useState(false);
+
+  const handleReverse = () => {
+    setIsReverse(!isReverse);
+  };
+
   return (
     <div className='px-6'>
       <div className='flex items-center justify-between mt-8'>
@@ -94,9 +100,50 @@ const HomeComponent = () => {
           alt='ads-car'
         />
       </div>
-      {/* Pick */}
-      <div className='mt-8'>
-        <PickUpCar />
+      {/* Pick-Up & Drop-Off */}
+      <div className='mt-8 flex flex-col items-center justify-center '>
+        {isReverse ? (
+          <>
+            <div className='z-10 w-full'>
+              <DropOffCar />
+            </div>
+
+            <div className='flex items-center justify-center'>
+              <button
+                onClick={() => handleReverse()}
+                className='w-[60px] h-[60px] bg-primary-500 hover:bg-primary-700 rounded-xl flex items-center justify-center '
+              >
+                <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
+              </button>
+            </div>
+            <PickUpCar />
+          </>
+        ) : (
+          <>
+            <div className='z-10 w-full'>
+              <PickUpCar />
+            </div>
+            <div className='flex items-center justify-center'>
+              <button
+                onClick={() => handleReverse()}
+                className='w-[60px] h-[60px] bg-primary-500 rounded-xl flex items-center justify-center '
+              >
+                <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
+              </button>
+            </div>
+            <DropOffCar />
+          </>
+        )}
+        {/* <PickUpCar />
+        <div className='flex items-center justify-center'>
+          <button
+            onClick={() => handleReverse()}
+            className='w-[60px] h-[60px] bg-primary-500 rounded-xl flex items-center justify-center '
+          >
+            <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
+          </button>
+        </div>
+        <DropOffCar /> */}
       </div>
     </div>
   );
