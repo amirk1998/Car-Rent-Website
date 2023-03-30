@@ -2,12 +2,20 @@ import PickUpCar from '../PickUpCar/PickUpCar';
 import { HiArrowsUpDown } from 'react-icons/hi2';
 import DropOffCar from '../DropOffCar/DropOffCar';
 import { useState } from 'react';
+import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
+import { useNavigate } from 'react-router-dom';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
 
+  let navigate = useNavigate();
+
   const handleReverse = () => {
     setIsReverse(!isReverse);
+  };
+
+  const viewHandler = () => {
+    navigate('/popular-cars');
   };
 
   return (
@@ -144,6 +152,21 @@ const HomeComponent = () => {
           </button>
         </div>
         <DropOffCar /> */}
+      </div>
+      {/* Popular Cars */}
+      <div className='flex flex-col items-center mt-8 gap-y-5'>
+        <div className='flex items-center justify-between w-full'>
+          <p className='text-secondary-300 font-semibold text-sm'>
+            Popular Cars
+          </p>
+          <button
+            onClick={viewHandler}
+            className='text-primary-500 hover:text-primary-700 font-semibold text-xs'
+          >
+            View All
+          </button>
+        </div>
+        <PopularCarList />
       </div>
     </div>
   );

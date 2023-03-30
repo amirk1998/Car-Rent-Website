@@ -1,8 +1,17 @@
 import { useState } from 'react';
 
-const PopularCarCard = () => {
+const PopularCarCard = ({
+  carName,
+  type,
+  space,
+  capacity,
+  isDiscount,
+  price,
+  offPrice,
+  drive,
+}) => {
   const [isLike, setIsLike] = useState(false);
-  const [isDiscount, setIsDiscount] = useState(false);
+  // const [isDiscount, setIsDiscount] = useState(false);
 
   const handleLike = () => {
     setIsLike(!isLike);
@@ -14,8 +23,9 @@ const PopularCarCard = () => {
       <div className='flex flex-col gap-y-1'>
         <div className='flex items-center justify-between'>
           <p className='text-base font-semibold text-secondary-500'>
-            Koenigsegg
+            {carName}
           </p>
+          {/* Like Button */}
           <button onClick={handleLike}>
             {isLike ? (
               <svg
@@ -50,11 +60,11 @@ const PopularCarCard = () => {
             )}
           </button>
         </div>
-        <p className='text-xs font-medium text-secondary-300'>Sport</p>
+        <p className='text-xs font-medium text-secondary-300'>{type}</p>
       </div>
       {/* Car Image */}
       <div className='mt-8 w-[180px] h-14 ml-[14px]'>
-        <img src={'/images/PopularCars/Corolla.png'} alt='carIMG' />
+        <img src={`/images/PopularCars/${carName}.png`} alt={carName} />
       </div>
       {/* Spesification */}
       <div className='flex items-center justify-between mt-11 '>
@@ -72,7 +82,7 @@ const PopularCarCard = () => {
             />
           </svg>
           <p className='text-secondary-300 font-medium text-xs'>
-            90 <span>L</span>
+            {capacity} <span>L</span>
           </p>
         </div>
         {/* Drive */}
@@ -95,7 +105,7 @@ const PopularCarCard = () => {
             <path fill='#90A3BF' d='M8 6h4v2H8zM2 6h4v2H2zM6 8h2v4H6z' />
             <rect width='6' height='6' x='4' y='4' fill='#fff' rx='3' />
           </svg>
-          <p className='text-secondary-300 font-medium text-xs'>Manual</p>
+          <p className='text-secondary-300 font-medium text-xs'>{drive}</p>
         </div>
         {/* Space */}
         <div className='flex items-center gap-x-1'>
@@ -115,7 +125,7 @@ const PopularCarCard = () => {
             />
           </svg>
           <p className='text-secondary-300 font-medium text-xs'>
-            4 <span>People</span>
+            {space} <span>People</span>
           </p>
         </div>
       </div>
@@ -125,19 +135,19 @@ const PopularCarCard = () => {
           <div className='flex flex-col'>
             {/* Off Price */}
             <p className='text-secondary-500 font-bold text-xs '>
-              $ <span className='text-base xl:text-xl'>79</span>
+              $ <span className='text-base xl:text-xl'>{offPrice}</span>
               <span className='text-secondary-300 ml-1'>/day</span>
             </p>
             {/* Price */}
             <p className='text-secondary-300 font-bold text-xs line-through'>
-              $ <span>89</span>
+              $ <span>{price}</span>
             </p>
           </div>
         ) : (
           <div className='flex flex-col'>
             {/* Price */}
             <p className='text-secondary-500 font-bold text-xs '>
-              $ <span className='text-base xl:text-xl'>79</span>
+              $ <span className='text-base xl:text-xl'>{price}</span>
               <span className='text-secondary-300 ml-1'>/day</span>
             </p>
           </div>

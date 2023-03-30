@@ -23,7 +23,8 @@
     "react-router-dom": "^6.9.0",
     "react-select": "^5.7.2",
     "react-tailwindcss-datepicker": "^1.5.1",
-    "react-time-picker": "^5.2.0"
+    "react-time-picker": "^5.2.0",
+    "tailwind-scrollbar": "^3.0.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

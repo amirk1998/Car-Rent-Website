@@ -1,18 +1,18 @@
 export const PopularCars = [
   {
     id: 1,
-    carsName: 'Koenigsegg',
+    carName: 'Koenigsegg',
     type: 'Sport',
     space: 4,
     capacity: 90,
-    price: 99,
-    offPrice: 99,
+    price: 199,
+    offPrice: 199,
     isDiscount: false,
     drive: 'Manual',
   },
   {
     id: 2,
-    carsName: 'Rolls-Royce',
+    carName: 'Rolls-Royce',
     type: 'Sedan',
     space: 4,
     capacity: 70,
@@ -23,7 +23,7 @@ export const PopularCars = [
   },
   {
     id: 3,
-    carsName: 'Mustang',
+    carName: 'Mustang',
     type: 'Sport',
     space: 4,
     capacity: 60,
@@ -34,7 +34,7 @@ export const PopularCars = [
   },
   {
     id: 4,
-    carsName: 'Camry',
+    carName: 'Camry',
     type: 'Sedan',
     space: 5,
     capacity: 50,
@@ -45,7 +45,7 @@ export const PopularCars = [
   },
   {
     id: 5,
-    carsName: 'CRV',
+    carName: 'CRV',
     type: 'SUV',
     space: 5,
     capacity: 70,
@@ -56,7 +56,7 @@ export const PopularCars = [
   },
   {
     id: 6,
-    carsName: 'Explorer',
+    carName: 'Explorer',
     type: 'SUV',
     space: 7,
     capacity: 85,
@@ -67,10 +67,10 @@ export const PopularCars = [
   },
   {
     id: 7,
-    carsName: 'Accord',
-    type: 'Sedan',
-    space: 5,
-    capacity: 55,
+    carName: 'Audi-S7',
+    type: 'sedan',
+    space: 4,
+    capacity: 85,
     price: 69,
     offPrice: 69,
     isDiscount: false,
@@ -78,7 +78,7 @@ export const PopularCars = [
   },
   {
     id: 8,
-    carsName: 'Charger',
+    carName: 'Charger',
     type: 'Sport',
     space: 5,
     capacity: 70,
@@ -89,7 +89,7 @@ export const PopularCars = [
   },
   {
     id: 9,
-    carsName: 'Escape',
+    carName: 'Escape',
     type: 'SUV',
     space: 5,
     capacity: 60,
@@ -100,7 +100,7 @@ export const PopularCars = [
   },
   {
     id: 10,
-    carsName: 'Corolla',
+    carName: 'Corolla',
     type: 'Sedan',
     space: 5,
     capacity: 50,
