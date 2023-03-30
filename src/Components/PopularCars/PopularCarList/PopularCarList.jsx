@@ -3,7 +3,7 @@ import PopularCarCard from '../PopularCarCard/PopularCarCard';
 
 const PopularCarList = () => {
   return (
-    <div className='flex overscroll-contain items-center gap-x-5 gap-y-5 overflow-x-scroll scrollbar-none   scrollbar-track-transparent overscroll-y-none w-full'>
+    <div className='flex overscroll-contain items-center gap-x-5 gap-y-5 overflow-x-scroll scrollbar-none scrollbar-track-transparent overscroll-y-none w-full'>
       {PopularCars.map((item) => {
         return (
           <PopularCarCard

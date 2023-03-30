@@ -4,6 +4,7 @@ import DropOffCar from '../DropOffCar/DropOffCar';
 import { useState } from 'react';
 import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
 import { useNavigate } from 'react-router-dom';
+import SuggestCarList from '../SuggestedCars/SuggestCarList/SuggestCarList';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
@@ -167,6 +168,13 @@ const HomeComponent = () => {
           </button>
         </div>
         <PopularCarList />
+      </div>
+      {/* Recommendation Cars */}
+      <div className='flex flex-col mt-8 gap-y-5 w-full'>
+        <p className='text-secondary-300 font-semibold text-sm'>
+          Recommendation Cars
+        </p>
+        <SuggestCarList />
       </div>
     </div>
   );
