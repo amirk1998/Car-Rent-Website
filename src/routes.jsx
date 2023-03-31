@@ -1,4 +1,3 @@
-import SuggestCarCard from './Components/SuggestedCars/SuggestCarCard/SuggestCarCard';
 import SuggestCarList from './Components/SuggestedCars/SuggestCarList/SuggestCarList';
 import HomePage from './Pages/HomePage/HomePage';
 import PopularCarsPage from './Pages/PopularCarsPage/PopularCarsPage';
