@@ -1,23 +1,46 @@
-import PickUpCar from '../PickUpCar/PickUpCar';
-import { HiArrowsUpDown } from 'react-icons/hi2';
-import DropOffCar from '../DropOffCar/DropOffCar';
-import { useState } from 'react';
-import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PopularCars } from '../../../Data/PopularCars';
+import PickUpCar from '../PickUpCar/PickUpCar';
+import DropOffCar from '../DropOffCar/DropOffCar';
+import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
 import SuggestCarList from '../SuggestedCars/SuggestCarList/SuggestCarList';
 import SideBar from '../SideBar/SideBar';
+import { HiArrowsUpDown, HiArrowsRightLeft } from 'react-icons/hi2';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const windowWidth = window.innerWidth;
 
   let navigate = useNavigate();
+
+  const maxItems = PopularCars.length;
 
   const categories = [
     { id: 1, name: 'Category 1' },
     { id: 2, name: 'Category 2' },
     { id: 3, name: 'Category 3' },
   ];
+
+  // const [windowSize, setWindowSize] = useState({
+  //   width: undefined,
+  //   height: undefined,
+  // });
+
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setWindowSize({
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     });
+  //   }
+  //   window.addEventListener('resize', handleResize);
+  //   handleResize();
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
+
+  // console.log(windowSize);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -143,6 +166,7 @@ const HomeComponent = () => {
                 className='w-[60px] h-[60px] bg-primary-500 hover:bg-primary-700 rounded-xl flex items-center justify-center '
               >
                 <HiArrowsUpDown className='w-6 h-6 text-primary-000 md:hidden' />
+                <HiArrowsRightLeft className='hidden w-6 h-6 text-primary-000 md:flex' />
               </button>
             </div>
             <div className='w-full md:w-1/2'>
@@ -160,6 +184,7 @@ const HomeComponent = () => {
                 className='w-[60px] h-[60px] bg-primary-500 rounded-xl flex items-center justify-center '
               >
                 <HiArrowsUpDown className='w-6 h-6 text-primary-000 md:hidden' />
+                <HiArrowsRightLeft className='hidden w-6 h-6 text-primary-000 md:flex' />
               </button>
             </div>
             <div className='w-full md:w-1/2'>
@@ -181,7 +206,11 @@ const HomeComponent = () => {
             View All
           </button>
         </div>
-        <PopularCarList />
+        {windowWidth > 768 ? (
+          <PopularCarList numberOfItems={4} />
+        ) : (
+          <PopularCarList numberOfItems={maxItems} />
+        )}
       </div>
       {/* Recommendation Cars */}
       <div className='flex flex-col mt-8 gap-y-5 w-full'>

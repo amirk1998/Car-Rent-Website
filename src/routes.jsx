@@ -1,4 +1,3 @@
-import TimePicker from './Components/PickUpCar/TimePick';
 import SuggestCarList from './Components/SuggestedCars/SuggestCarList/SuggestCarList';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import HomePage from './Pages/HomePage/HomePage';
@@ -9,7 +8,6 @@ const routes = [
   { path: '/popular-cars', element: <PopularCarsPage /> },
   { path: '/suggest-cars', element: <SuggestCarList /> },
   { path: '/category', element: <CategoryPage /> },
-  { path: '/time', element: <TimePicker /> },
 ];
 
 export default routes;
