@@ -39,7 +39,7 @@ const customStyles = {
   menu: (provided, state) => ({
     ...provided,
     marginTop: '2px',
-    width: '90px',
+    width: '105px',
     maxHeight: '200px',
     overflowY: 'hide',
 

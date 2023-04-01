@@ -5,11 +5,23 @@ import { useState } from 'react';
 import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
 import { useNavigate } from 'react-router-dom';
 import SuggestCarList from '../SuggestedCars/SuggestCarList/SuggestCarList';
+import SideBar from '../SideBar/SideBar';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   let navigate = useNavigate();
+
+  const categories = [
+    { id: 1, name: 'Category 1' },
+    { id: 2, name: 'Category 2' },
+    { id: 3, name: 'Category 3' },
+  ];
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   const handleReverse = () => {
     setIsReverse(!isReverse);
@@ -53,7 +65,11 @@ const HomeComponent = () => {
             placeholder='Search something here'
           />
         </div>
-        <div className='border rounded-xl border-secondary-200 text-secondary-200 w-12 h-12 flex items-center justify-center'>
+        {/* SideBar Button */}
+        <button
+          onClick={toggleSidebar}
+          className='border rounded-xl border-secondary-200 text-secondary-200 w-12 h-12 flex items-center justify-center'
+        >
           <svg
             width='24'
             height='24'
@@ -86,9 +102,13 @@ const HomeComponent = () => {
               fill='#c3d4e9'
             />
           </svg>
-        </div>
+        </button>
+        <SideBar
+          categories={categories}
+          isOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+        />
       </div>
-
       {/* Ads */}
       <div className='w-full bg-info-500 h-[232px] mt-8 rounded-xl pt-4'>
         <div className='px-4 flex flex-col mb-4'>
@@ -110,10 +130,10 @@ const HomeComponent = () => {
         />
       </div>
       {/* Pick-Up & Drop-Off */}
-      <div className='mt-8 flex flex-col items-center justify-center '>
+      <div className='mt-8 flex flex-col md:flex-row md:justify-between items-center justify-center w-full '>
         {isReverse ? (
           <>
-            <div className='z-10 w-full'>
+            <div className='z-10 w-full md:w-1/2'>
               <DropOffCar />
             </div>
 
@@ -129,7 +149,7 @@ const HomeComponent = () => {
           </>
         ) : (
           <>
-            <div className='z-10 w-full'>
+            <div className='z-10 w-full md:w-1/2'>
               <PickUpCar />
             </div>
             <div className='flex items-center justify-center'>
@@ -140,7 +160,9 @@ const HomeComponent = () => {
                 <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
               </button>
             </div>
-            <DropOffCar />
+            <div className='w-full md:w-1/2'>
+              <DropOffCar />
+            </div>
           </>
         )}
         {/* <PickUpCar />

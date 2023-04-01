@@ -8,7 +8,7 @@ const customStyles = {
   control: (provided, state) => ({
     ...provided,
     height: '40px',
-    width: '130px',
+    width: '125px',
     border: 'none',
     boxShadow: 'none',
     borderRadius: '6px',
