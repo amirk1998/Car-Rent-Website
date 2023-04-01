@@ -19,7 +19,7 @@ const DropOffCar = () => {
             Drop-Off
           </p>
         </div>
-        <div className='flex items-center'>
+        <div className='flex items-center w-full'>
           {/* Location */}
           <div className='flex flex-col items-center justify-center gap-y-2 border-r border-r-secondary-200 px-2 mt-6 w-[30%]'>
             <label className='font-bold text-base text-secondary-500'>

@@ -32,7 +32,7 @@ const HomeComponent = () => {
   };
 
   return (
-    <div className='px-6'>
+    <div className='px-6 w-full'>
       <div className='flex items-center justify-between mt-8'>
         <p className='text-primary-500 font-bold uppercase'>Morent</p>
         <div className='w-6 h-6 rounded-full flex items-center justify-center'>
@@ -130,10 +130,10 @@ const HomeComponent = () => {
         />
       </div>
       {/* Pick-Up & Drop-Off */}
-      <div className='mt-8 flex flex-col md:flex-row md:justify-between items-center justify-center w-full '>
+      <div className='mt-8 flex flex-col md:flex-row md:justify-evenly items-center justify-center w-full'>
         {isReverse ? (
           <>
-            <div className='z-10 w-full md:w-1/2'>
+            <div className='z-10 w-full md:w-1/2 md:z-0'>
               <DropOffCar />
             </div>
 
@@ -142,14 +142,16 @@ const HomeComponent = () => {
                 onClick={() => handleReverse()}
                 className='w-[60px] h-[60px] bg-primary-500 hover:bg-primary-700 rounded-xl flex items-center justify-center '
               >
-                <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
+                <HiArrowsUpDown className='w-6 h-6 text-primary-000 md:hidden' />
               </button>
             </div>
-            <PickUpCar />
+            <div className='w-full md:w-1/2'>
+              <PickUpCar />
+            </div>
           </>
         ) : (
           <>
-            <div className='z-10 w-full md:w-1/2'>
+            <div className='z-10 w-full md:w-1/2 md:z-0'>
               <PickUpCar />
             </div>
             <div className='flex items-center justify-center'>
@@ -157,7 +159,7 @@ const HomeComponent = () => {
                 onClick={() => handleReverse()}
                 className='w-[60px] h-[60px] bg-primary-500 rounded-xl flex items-center justify-center '
               >
-                <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
+                <HiArrowsUpDown className='w-6 h-6 text-primary-000 md:hidden' />
               </button>
             </div>
             <div className='w-full md:w-1/2'>
@@ -165,16 +167,6 @@ const HomeComponent = () => {
             </div>
           </>
         )}
-        {/* <PickUpCar />
-        <div className='flex items-center justify-center'>
-          <button
-            onClick={() => handleReverse()}
-            className='w-[60px] h-[60px] bg-primary-500 rounded-xl flex items-center justify-center '
-          >
-            <HiArrowsUpDown className='w-6 h-6 text-primary-000' />
-          </button>
-        </div>
-        <DropOffCar /> */}
       </div>
       {/* Popular Cars */}
       <div className='flex flex-col items-center mt-8 gap-y-5'>
