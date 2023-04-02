@@ -11,18 +11,18 @@ import Header from '../Header/Header';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const windowWidth = window.innerWidth;
 
   let navigate = useNavigate();
 
   const maxItems = PopularCars.length;
 
-  const categories = [
-    { id: 1, name: 'Category 1' },
-    { id: 2, name: 'Category 2' },
-    { id: 3, name: 'Category 3' },
-  ];
+  // const categories = [
+  //   { id: 1, name: 'Category 1' },
+  //   { id: 2, name: 'Category 2' },
+  //   { id: 3, name: 'Category 3' },
+  // ];
 
   // const [windowSize, setWindowSize] = useState({
   //   width: undefined,
@@ -43,9 +43,9 @@ const HomeComponent = () => {
 
   // console.log(windowSize);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsSidebarOpen(!isSidebarOpen);
+  // };
 
   const handleReverse = () => {
     setIsReverse(!isReverse);
@@ -57,12 +57,7 @@ const HomeComponent = () => {
 
   return (
     <div className='w-full'>
-      <Header
-        categories={categories}
-        isOpen={isSidebarOpen}
-        toggleSidebar={toggleSidebar}
-      />
-      <div className='px-6 w-full'>
+      <div className='px-6 w-full md:px-16'>
         {/* Ads */}
         <div className='w-full bg-info-500 h-[232px] rounded-xl pt-4'>
           <div className='px-4 flex flex-col mb-4'>
@@ -150,76 +145,15 @@ const HomeComponent = () => {
           </p>
           <SuggestCarList />
           {/*  Button Show More Cars */}
-          <div className='flex items-center justify-between mt-7 w-1/2'>
+          <div className='flex items-center justify-center mt-7 w-full'>
             <button className='bg-primary-500 hover:bg-primary-700 text-primary-000 w-32 h-9 font-semibold text-xs px-4 py-2 rounded-lg'>
               Show More Cars
             </button>
-            <p className='font-bold text-secondary-300 text-sm ml-12'>
+            <p className='font-bold text-secondary-300 text-sm flex items-center justify-center w-36'>
               120 Car
             </p>
           </div>
         </div>
-        {/* Bottom Page Title */}
-        <div className='flex flex-col w-[216px] h-24 gap-y-4 mt-12'>
-          <p className='text-primary-500 font-bold uppercase'>Morent</p>
-          <p className='text-xs font-medium text-secondary-300'>
-            Our vision is to provide convenience and help increase your sales
-            business.
-          </p>
-        </div>
-        {/* Resources */}
-        <div className='flex mt-12 gap-x-16'>
-          <div className='flex flex-col gap-y-12'>
-            {/* Resource #1 */}
-            <div className='flex flex-col'>
-              <p className='mb-4 text-secondary-500 font-semibold text-xl'>
-                About
-              </p>
-              <ul className='flex flex-col list-none text-secondary-300 font-medium text-base cursor-pointer gap-y-4'>
-                <li>How it works</li>
-                <li>Featured</li>
-                <li>Partnership</li>
-                <li>Business Relation</li>
-              </ul>
-            </div>
-            {/* Resource #2 */}
-            <div className='flex flex-col'>
-              <p className='mb-4 text-secondary-500 font-semibold text-xl'>
-                Community
-              </p>
-              <ul className='flex flex-col list-none text-secondary-300 font-medium text-base cursor-pointer gap-y-4'>
-                <li>Events</li>
-                <li>Blog</li>
-                <li>Podcast</li>
-                <li>Invite a friend</li>
-              </ul>
-            </div>
-            {/* Resource #3 */}
-          </div>
-          <div className='flex flex-col'>
-            <p className='mb-4 text-secondary-500 font-semibold text-xl'>
-              Socials
-            </p>
-            <ul className='flex flex-col list-none text-secondary-300 font-medium text-base cursor-pointer gap-y-4'>
-              <li>Discord</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
-            </ul>
-          </div>
-        </div>
-        {/* Privacy - Terms */}
-        <div className='flex items-center justify-between w-full mt-12'>
-          <p className='text-secondary-500 font-semibold text-xs'>
-            Privacy & Policy
-          </p>
-          <p className='text-secondary-500 font-semibold text-xs'>
-            Terms & Condition
-          </p>
-        </div>
-        <p className='text-secondary-500 font-semibold text-xs mt-8'>
-          ©2022 MORENT. All rights reserved
-        </p>
       </div>
     </div>
   );

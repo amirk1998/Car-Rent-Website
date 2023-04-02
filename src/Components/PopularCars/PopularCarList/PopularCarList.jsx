@@ -5,7 +5,7 @@ const PopularCarList = ({ numberOfItems }) => {
   const visibleCars = PopularCars.slice(0, numberOfItems);
 
   return (
-    <div className='flex sm:grid sm:grid-col-2 md:grid-cols-3 lg:grid-cols-4 sm:overflow-hidden sm:h-auto sm:scrollbar-none overscroll-contain items-center gap-5 overflow-x-scroll scrollbar-none scrollbar-track-transparent overscroll-y-none w-full'>
+    <div className='flex sm:grid sm:grid-col-2 md:grid-cols-3 lg:grid-cols-4 sm:overflow-hidden sm:h-auto sm:scrollbar-none sm:overscroll-none overscroll-contain items-center gap-5 overflow-x-scroll scrollbar-none scrollbar-track-transparent overscroll-y-none w-full'>
       {visibleCars.map((item) => {
         return (
           <PopularCarCard

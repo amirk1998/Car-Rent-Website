@@ -1,14 +1,10 @@
 import Footer from '../Components/Footer/Footer';
 import Header from '../Components/Header/Header';
 
-const Layout = ({ children, categories, isOpen, toggleSidebar }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Header
-        categories={categories}
-        isOpen={isOpen}
-        toggleSidebar={toggleSidebar}
-      />
+      <Header />
       {children}
       <Footer />
     </>
