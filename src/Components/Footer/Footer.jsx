@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
       {/* Privacy - Terms */}
       <div className='flex items-center justify-between w-full mt-12'>
-        <p className='hidden sm:inline-block sm:text-base text-secondary-500 font-semibold text-xs'>
+        <p className='hidden sm:inline-block sm:text-base text-secondary-500 font-semibold text-xs w-full'>
           ©2022 MORENT. All rights reserved
         </p>
 
