@@ -5,9 +5,7 @@ import PickUpCar from '../PickUpCar/PickUpCar';
 import DropOffCar from '../DropOffCar/DropOffCar';
 import PopularCarList from '../PopularCars/PopularCarList/PopularCarList';
 import SuggestCarList from '../SuggestedCars/SuggestCarList/SuggestCarList';
-import SideBar from '../SideBar/SideBar';
 import { HiArrowsUpDown, HiArrowsRightLeft } from 'react-icons/hi2';
-import Header from '../Header/Header';
 
 const HomeComponent = () => {
   const [isReverse, setIsReverse] = useState(false);
@@ -145,8 +143,8 @@ const HomeComponent = () => {
           </p>
           <SuggestCarList />
           {/*  Button Show More Cars */}
-          <div className='flex items-center justify-center mt-7 w-full'>
-            <button className='bg-primary-500 hover:bg-primary-700 text-primary-000 w-32 h-9 font-semibold text-xs px-4 py-2 rounded-lg'>
+          <div className='flex items-center justify-end mt-7 w-full'>
+            <button className='bg-primary-500 hover:bg-primary-700 text-primary-000 w-32 h-9 font-semibold text-xs px-4 py-2 rounded-lg md:mr-[300px] lg:mr-[350px]'>
               Show More Cars
             </button>
             <p className='font-bold text-secondary-300 text-sm flex items-center justify-center w-36'>

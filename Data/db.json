@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "Test 1",
+      "Address": "Shiraz,Molasadra",
+      "PhoneNumber": "09171234567",
+      "townCity": "Shiraz",
+      "terms": true,
+      "id": 1
+    }
+  ]
+}

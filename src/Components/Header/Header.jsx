@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <>
-      <header className='flex flex-col w-full bg-primary-000 mt-8 h-44 md:h-32 px-6'>
+      <header className='flex flex-col w-full bg-primary-000 pt-8 md:pt-10 h-44 md:h-32 px-6'>
         {/* Brand and Profile Picture */}
         <div className='flex items-center justify-between w-full'>
           <p className='text-primary-500 font-bold uppercase text-2xl md:text-[32px]'>
@@ -27,7 +27,7 @@ const Header = () => {
             </div>
             <input
               type='text'
-              className='block md:w-full h-11 py-2 pr-10 pl-12 text-sm text-secondary-500 placeholder-secondary-400 rounded-full focus:outline-none focus:bg-white border border-secondary-200'
+              className='block md:w-full h-11 py-2 pr-10 pl-12 text-sm text-secondary-500 placeholder-secondary-200 rounded-full focus:outline-none focus:bg-white border border-secondary-200'
               placeholder='Search something here'
             />
             <button className='absolute inset-y-0 right-0 flex items-center pr-3'>
