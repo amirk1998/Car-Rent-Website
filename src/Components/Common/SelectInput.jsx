@@ -16,7 +16,7 @@ const SelectInput = ({ name, label, options, formik }) => {
         onChange={handleChange}
         onBlur={handleBlur}
         multiple={false}
-        className={`bg-page-bg text-secondary-300 font-medium text-xs rounded-lg focus:border-primary-500 focus:outline-none block h-14 w-full py-4 pl-6 pr-4 `}
+        className={`bg-page-bg text-secondary-400 font-medium text-xs rounded-lg border-0 focus:border-primary-500 focus:outline-none block h-14 w-full py-4 pl-6 pr-4 `}
       >
         <option
           value=''

@@ -1,9 +1,9 @@
-import PaymentCompnent from '../../Components/Payment/Payment';
+import PaymentComponent from '../../Components/Payment/Payment';
 
 const PaymentPage = () => {
   return (
     <div className='w-full'>
-      <PaymentCompnent />
+      <PaymentComponent />
     </div>
   );
 };
