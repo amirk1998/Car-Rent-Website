@@ -61,7 +61,7 @@ const validationSchema = Yup.object({
   // ),
 });
 
-const PaymentComp = () => {
+const PaymentCompnent = () => {
   // const [timePickUp, setTimePickUp] = useState('Time');
 
   const onSubmit = (values) => {
@@ -140,4 +140,4 @@ const PaymentComp = () => {
   );
 };
 
-export default PaymentComp;
+export default PaymentCompnent;

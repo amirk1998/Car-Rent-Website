@@ -22,7 +22,7 @@ const SelectInput = ({ name, label, options, formik }) => {
           value=''
           disabled
           // selected
-          className='text-secondary-300 text-xs font-medium'
+          className='text-secondary-300 text-sm font-medium'
         >
           {label}
         </option>
@@ -30,7 +30,7 @@ const SelectInput = ({ name, label, options, formik }) => {
           <option
             key={option.value}
             value={option.value}
-            className='text-secondary-500 text-xs font-medium'
+            className='text-secondary-500 text-sm font-medium'
           >
             {option.label}
           </option>
