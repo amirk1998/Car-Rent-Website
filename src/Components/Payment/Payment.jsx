@@ -104,7 +104,7 @@ const PaymentComponent = () => {
   });
 
   return (
-    <div className='flex flex-col items-center px-6 w-full'>
+    <div className='flex flex-col items-center px-6 w-full min-h-screen'>
       <div>Rental Summary</div>
       <form onSubmit={formik.handleSubmit} className='flex flex-col w-full'>
         {/* Step 1 */}
@@ -221,8 +221,8 @@ const PaymentComponent = () => {
               </p>
             </div>
           </div>
+          {/* VISA */}
           <div className='bg-page-bg flex flex-col p-4 mt-6 rounded-xl'>
-            {/* VISA */}
             <div className='flex flex-col'>
               {/* Input,Label,Icon */}
               <div className='flex justify-between'>
@@ -423,6 +423,62 @@ const PaymentComponent = () => {
                 </svg>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Step 4 */}
+        <div className='bg-primary-000 p-4 rounded-xl mt-8 flex flex-col'>
+          <div className='flex justify-between'>
+            <div className='flex flex-col gap-y-1'>
+              <p className='text-secondary-500 font-bold text-base'>
+                Confirmation
+              </p>
+              <p className='text-secondary-300 font-medium text-xs w-48'>
+                We are getting to the end. Just few clicks and your rental is
+                ready!
+              </p>
+            </div>
+            <div>
+              <p className='text-secondary-300 font-medium text-xs'>
+                Step 4 of 4
+              </p>
+            </div>
+          </div>
+          <div className='flex bg-page-bg rounded-xl items-center px-4 py-2 mt-6'>
+            <input
+              id='news'
+              type='checkbox'
+              value='news'
+              className='w-4 h-4 text-blue-600  border-secondary-300 rounded focus:ring-blue-500 '
+            />
+            <label
+              htmlFor='news'
+              className='ml-4 text-xs font-medium text-secondary-500 leading-5 '
+            >
+              I agree with sending an Marketing and newsletter emails. No spam,
+              promised!
+            </label>
+          </div>
+          <div className='flex bg-page-bg rounded-xl items-center px-4 py-2 mt-6'>
+            <input
+              id='terms'
+              type='checkbox'
+              value='terms'
+              className='w-4 h-4 text-blue-600  border-secondary-300 rounded focus:ring-blue-500 '
+            />
+            <label
+              htmlFor='terms'
+              className='ml-4 text-xs font-medium text-secondary-500 leading-5 '
+            >
+              I agree with our
+              <span className='underline underline-offset-4 ml-1'>
+                terms and conditions
+              </span>
+              and
+              <span className='underline underline-offset-4 ml-1'>
+                privacy policy
+              </span>
+              !
+            </label>
           </div>
         </div>
       </form>

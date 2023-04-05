@@ -1,14 +1,25 @@
 import { Routes, Route } from 'react-router-dom';
 import routes from './routes';
 import Layout from './Layout/Layout';
+import Wrapper from './Components/HOC/Wrapper';
 
 function App() {
   return (
-    <div className='App bg-page-bg w-full min-h-screen h-[3000px] md:h-[2120px]'>
+    <div className='App bg-page-bg w-full min-h-screen h-auto'>
       <Layout>
         <Routes>
           {routes.map((route) => {
-            return <Route {...route} key={crypto.randomUUID()} />;
+            return (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={
+                  <Wrapper height={route.wrapperHeight}>
+                    {route.element}
+                  </Wrapper>
+                }
+              />
+            );
           })}
         </Routes>
       </Layout>

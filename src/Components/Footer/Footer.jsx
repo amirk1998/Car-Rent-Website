@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='bottom-0 bg-page-bg md:bg-primary-000 md:mt-20 px-6 md:px-16 h-[480px]'>
+    <footer className='bottom-0 bg-page-bg md:bg-primary-000 md:mt-20 px-6 md:px-16 flex-shrink-0'>
       {/* Bottom Page Title */}
       <div className='sm:flex sm:justify-between sm:border-b sm:border-b-secondary-200 sm:pb-9 '>
         <div className='flex flex-col w-[216px] md:w-[292px] h-24 md:h-28 gap-y-4 mt-12 '>

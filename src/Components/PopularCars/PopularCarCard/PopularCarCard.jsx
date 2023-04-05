@@ -212,7 +212,7 @@ const PopularCarCard = ({
           </div>
         )}
 
-        <button className='bg-primary-500 hover:bg-primary-700 text-primary-000 text-xs lg:text-base font-semibold w-24 h-9 lg:w-[116px] lg:h-11 rounded-lg lg:px-5 lg:py-[10px]'>
+        <button className='bg-primary-500 hover:bg-primary-700 text-primary-000 text-xs lg:text-base font-semibold w-24 h-9 lg:w-[116px] lg:h-11 rounded-lg lg:px-4 lg:py-[10px]'>
           Rent Now
         </button>
       </div>
